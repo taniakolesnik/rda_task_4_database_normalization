@@ -14,7 +14,7 @@ CREATE TABLE Warehouse (
     WarehouseName VARCHAR(50),
     WarehouseAddress VARCHAR(50), 
     CountryID INT,
-	FOREIGN KEY (CountryID) REFERENCES Countries(ID) ON DELETE NO ACTION,
+	FOREIGN KEY (CountryID) REFERENCES Countries(ID),
     PRIMARY KEY (ID)
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE ProductInventory (
     ProductName VARCHAR(50),
     WarehouseID INT,
     WarehouseAmount INT,
-	FOREIGN KEY (WarehouseID) REFERENCES Warehouse(ID) ON DELETE NO ACTION,
+	FOREIGN KEY (WarehouseID) REFERENCES Warehouse(ID),
     PRIMARY KEY (ID)
 );
 
